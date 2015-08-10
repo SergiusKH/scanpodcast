@@ -3,31 +3,31 @@
         <podcast>
             <name>UWP - Eженедельный подкаст от Umputun</name>
             <rss>http://feeds.rucast.net/Umputun</rss>
-            <pattern>http://uwp.rucast.net/ump_podcast(n).mp3</pattern>
+            <pattern>http:\\/\\/uwp.rucast.net\\/ump_podcast\\d+.mp3</pattern>
             <proxy>no</proxy>
         </podcast>
         <podcast>
             <name>Радио-Т</name>
             <rss>http://feeds.rucast.net/radio-t</rss>
-            <pattern>http://cdn.radio-t.com/rt_podcast(n).mp3</pattern>
+            <pattern>http:\\/\\/cdn.radio-t.com\\/rt_podcast\\d+.mp3</pattern>
             <proxy>no</proxy>
         </podcast>
         <podcast>
             <name>Пираты-РТ</name>
             <rss>http://feeds.feedburner.com/pirate-radio-t</rss>
-            <pattern>http://cdn.radio-t.com/rt(n)post.mp3</pattern>
+            <pattern>http:\\/\\/cdn.radio-t.com\\/rt\\d+post.mp3</pattern>
             <proxy>no</proxy>
         </podcast>
         <podcast>
             <name>Разбор Полетов</name>
             <rss>http://feeds.feedburner.com/razbor-podcast?format=xml</rss>
-            <pattern>http://traffic.libsyn.com/razborpoletov/razbor_(n).mp3</pattern>
+            <pattern>http:\\/\\/traffic.libsyn.com\\/razborpoletov\\/razbor_\\d+.mp3</pattern>
             <proxy>no</proxy>
         </podcast>
         <podcast>
             <name>Америчка</name>
             <rss>http://feeds.feedburner.com/americhka/oBlg?format=xml</rss>
-            <pattern>http://myflex.org/yf/podru/budam(n).mp3</pattern>
+            <pattern>http:\\/\\/myflex.org\\/yf\\/podru\\/budam\\d+.mp3</pattern>
             <proxy>203.172.233.237:3128</proxy>
         </podcast>
     </podcasts>
