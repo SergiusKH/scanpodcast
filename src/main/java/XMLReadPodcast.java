@@ -9,6 +9,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +18,11 @@ import java.util.List;
  */
 public class XMLReadPodcast {
 
+   /*
+   * return list podcast objects
+   */
     public static List<Podcast> xmlReadPodcast() {
+        List<Podcast> podcastList = new ArrayList<Podcast>();
         try {
             File fXmlFile = new File("podcast.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -31,10 +36,11 @@ public class XMLReadPodcast {
                 Node nNode = nList.item(temp);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    System.out.println("Name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
-                    System.out.println("RSS : " + eElement.getElementsByTagName("rss").item(0).getTextContent());
-                    System.out.println("Pattern : " + eElement.getElementsByTagName("pattern").item(0).getTextContent());
-                    System.out.println("Proxy : " + eElement.getElementsByTagName("proxy").item(0).getTextContent());
+                    podcastList.add(new Podcast(eElement.getElementsByTagName("name").item(0).getTextContent(),
+                                    eElement.getElementsByTagName("rss").item(0).getTextContent(),
+                                    eElement.getElementsByTagName("pattern").item(0).getTextContent(),
+                                    eElement.getElementsByTagName("proxy").item(0).getTextContent())
+                    );
                 }
             }
 
@@ -46,6 +52,6 @@ public class XMLReadPodcast {
             e.printStackTrace();
         }
 
-        return null;
+        return podcastList;
     }
 }
